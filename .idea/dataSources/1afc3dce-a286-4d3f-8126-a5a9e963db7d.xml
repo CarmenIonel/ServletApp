@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - assignment1_2@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="assignment1_2">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="assignment-one-db"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="city"/>
+    <table id="9" parent="2" name="flight"/>
+    <table id="10" parent="2" name="hibernate_sequence"/>
+    <table id="11" parent="2" name="user"/>
+    <column id="12" parent="8" name="idcity">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="8" name="latitude">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="14" parent="8" name="longitude">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="15" parent="8" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="16" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idcity</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="9" name="idflight">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="airplaneType">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="arrivalDateTime">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="20" parent="9" name="departureDateTime">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="21" parent="9" name="arrivalCity_idcity">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="departureCity_idcity">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="23" parent="9" name="FKor8qp1w9es800123ipkdq1mkt">
+      <ColNames>departureCity_idcity</ColNames>
+    </index>
+    <index id="24" parent="9" name="FKsv3jboc56954htxjhbbu7h5cv">
+      <ColNames>arrivalCity_idcity</ColNames>
+    </index>
+    <key id="25" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idflight</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="26" parent="9" name="FKsv3jboc56954htxjhbbu7h5cv">
+      <ColNames>arrivalCity_idcity</ColNames>
+      <RefSchemaName>assignment1_2</RefSchemaName>
+      <RefTableName>city</RefTableName>
+      <RefColNames>idcity</RefColNames>
+    </foreign-key>
+    <foreign-key id="27" parent="9" name="FKor8qp1w9es800123ipkdq1mkt">
+      <ColNames>departureCity_idcity</ColNames>
+      <RefSchemaName>assignment1_2</RefSchemaName>
+      <RefTableName>city</RefTableName>
+      <RefColNames>idcity</RefColNames>
+    </foreign-key>
+    <column id="28" parent="10" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="iduser">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="11" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="11" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="11" name="role">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="34" parent="11" name="username">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="35" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>iduser</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
